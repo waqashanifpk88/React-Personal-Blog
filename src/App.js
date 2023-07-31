@@ -1,24 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import $ from 'jquery';
+import Sidebar from './Components/Sidebar';
+import Main from './Components/Main';
+import About from './Components/About';
+import Navbar from './Components/Navbar';
+import Contact from './Components/Contact';
+import Repos from './Components/Repos';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="wrapper">
+        <Sidebar />
+        <div className="content">
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Main />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/my-github-repositories" element={<Repos />} />
+            <Route exact path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
