@@ -34,7 +34,7 @@ const Contact = () => {
                     <div className="col-sm-4 text-center mb-3">
                         <i className="far fa-2x fa-envelope mb-3 text-primary"></i>
                         <h4 className="font-weight-bold">Email</h4>
-                        <p>tayyabaslam771@gmail.com</p>
+                        <p>waqashanifpk88@gmail.com</p>
                     </div>
                 </div>
                 <div className="col-md-12 pb-5">
